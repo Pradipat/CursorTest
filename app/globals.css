@@ -2,58 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-gray-900;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-@layer utilities {
-  .animate-fadeIn {
-    animation: fadeIn 0.4s ease-out forwards;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Remove the flash of white background */
-html, body {
-  background-color: #111827;
 }
 
 body {
-  min-height: 100vh;
-  color: white;
-  background: #111827;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* For Next.js App Router */
-main {
-  opacity: 0;
-  animation: fadeIn 0.4s ease-out forwards;
-}
-
-/* Ensure content is initially hidden */
-.page-content {
-  opacity: 0;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
