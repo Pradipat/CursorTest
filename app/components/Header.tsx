@@ -82,7 +82,7 @@ export default function Header() {
                 >
                   <Link 
                     href={item.href} 
-                    className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
+                    className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 menu-item"
                   >
                     {item.label}
                   </Link>

@@ -250,19 +250,6 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
-
-        {/* Footer */}
-        <motion.footer 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-gray-900 py-8 px-4"
-        >
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-gray-400">© 2024 Epic Gaming Adventures. All rights reserved.</p>
-          </div>
-        </motion.footer>
       </main>
     </PageWrapper>
   );
