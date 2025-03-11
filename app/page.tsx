@@ -45,7 +45,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="text-6xl leading-normal font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
             >
-              Epic Gaming Adventures
+              Epic Gaming Adventures Test
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
